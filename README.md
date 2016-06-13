@@ -54,3 +54,6 @@ try
 		catch (Exception $e) {
 			echo $e;
 		}
+
+
+3rd party helper library and example code only available at CI_SMS_MIN_FILES.zip file. 
