@@ -7,8 +7,9 @@ Requirements:
 
 write following code at your Controller Action code block
 
-try
+	try
 		{ 	
+			
 			//Register free demo account from https://onnorokomsms.com
 			
 			$userName = "your user name";
@@ -17,6 +18,10 @@ try
 			$this->load->library("Nusoap_library");
 			$soapClient =  new nusoap_client("https://api2.onnorokomSMS.com/sendSMS.asmx?wsdl", 'wsdl');
 			
+			//Soap Unicode Support
+			
+			$soapClient->soap_defencoding = 'UTF-8';
+			$soapClient->decode_utf8 = false;
 			
 			//OneToOne
 			
